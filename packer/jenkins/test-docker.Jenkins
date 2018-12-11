@@ -4,13 +4,19 @@ pipeline {
     stages {
     // This displays colors using the 'xterm' ansi color map.
         stage ("1. packer test") {
+         steps {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh packer'
+         }
         } 
         stage ("2. terraform test") {
+         steps {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh terraform'
+         }
         } 
         stage ("3. ansible test") {
+         steps {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh ansible'
+         }
         } 
     }
 }
