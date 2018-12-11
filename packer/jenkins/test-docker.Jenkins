@@ -3,13 +3,13 @@ pipeline {
     agent any
     stages {
     // This displays colors using the 'xterm' ansi color map.
-        stage "1. packer test" {
+        stage ("1. packer test") {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh packer'
         } 
-        stage "2. terraform test" {
+        stage ("2. terraform test") {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh terraform'
         } 
-        stage "3. ansible test" {
+        stage ("3. ansible test") {
           sh 'chmod packer/jenkins/test-packer.Jenkins 666; packer/jenkins/test.sh ansible'
         } 
     }
