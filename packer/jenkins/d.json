@@ -35,6 +35,12 @@
         "--extra-vars",
         "ansible_host={{user `ansible_host`}} ansible_connection={{user `ansible_connection`}}"
       ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "exit 1"
+      ]
     }
   ],
   "post-processors": [
