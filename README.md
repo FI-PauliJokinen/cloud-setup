@@ -5,4 +5,6 @@ which has:
 - packer
 - docker
 - ansible
-- terraform 
+- terraform
+
+installed on it.
